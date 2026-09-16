@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEXBOUTS — apex predators, one bout, one winner</title>
+<meta name="description" content="Photorealistic animal matchups settled in thirty seconds. A new bout every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1614;
+    --dust:#D9CBB3;
+    --dust-dim:#9C8E78;
+    --gold:#D4A017;
+    --oxblood:#7C2418;
+    --rule:#3B302A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--dust);
+    font-family:"Barlow",system-ui,-apple-system,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+  }
+  .wrap{max-width:46rem;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+
+  .mark{
+    font-family:"Anton",Impact,sans-serif;
+    font-size:1.05rem;
+    letter-spacing:.14em;
+    color:var(--dust);
+    text-decoration:none;
+    display:inline-block;
+    margin-bottom:5rem;
+  }
+  .mark:hover,.mark:focus-visible{color:var(--gold)}
+
+  /* Hero: tale-of-the-tape. The rule with "vs" set into it is the
+     structural device -- it states the format before a word of copy does. */
+  .tape{margin:0 0 2.25rem}
+  .tape h1{
+    font-family:"Anton",Impact,sans-serif;
+    font-weight:400;
+    font-size:clamp(3rem,13vw,6.5rem);
+    line-height:.86;
+    letter-spacing:.005em;
+    margin:0;
+    text-transform:uppercase;
+  }
+  .tape .side{display:block}
+  .tape .side:last-of-type{text-indent:.06em}
+  .versus{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin:.55rem 0;
+  }
+  .versus::before,.versus::after{
+    content:"";
+    flex:1;
+    height:2px;
+    background:var(--rule);
+  }
+  .versus span{
+    font-family:"Barlow",sans-serif;
+    font-size:.95rem;
+    font-weight:600;
+    letter-spacing:.32em;
+    color:var(--gold);
+    text-indent:.32em;
+  }
+
+  .stakes{
+    font-size:1.15rem;
+    color:var(--dust);
+    margin:0 0 .4rem;
+    max-width:32ch;
+  }
+  .cadence{color:var(--dust-dim);margin:0 0 4.5rem}
+
+  h2{
+    font-family:"Barlow",sans-serif;
+    font-size:.9rem;
+    font-weight:600;
+    letter-spacing:.28em;
+    color:var(--dust-dim);
+    margin:0 0 .25rem;
+  }
+
+  /* The card lineup. Rules between entries, not boxes around them --
+     a fight card is a list, not a grid of tiles. */
+  .card{list-style:none;margin:0;padding:0;border-top:2px solid var(--rule)}
+  .card li{border-bottom:1px solid var(--rule)}
+  .card a{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:1rem;
+    padding:1.15rem .25rem;
+    text-decoration:none;
+    color:var(--dust);
+  }
+  .venue{
+    font-family:"Anton",Impact,sans-serif;
+    font-size:1.6rem;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+  }
+  .handle{color:var(--dust-dim);font-size:.95rem;white-space:nowrap}
+  .card a:hover .venue,
+  .card a:focus-visible .venue{color:var(--gold)}
+  .card a:hover .handle,
+  .card a:focus-visible .handle{color:var(--dust)}
+  .card a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  footer{
+    margin-top:4.5rem;
+    padding-top:1.5rem;
+    border-top:1px solid var(--rule);
+    color:var(--dust-dim);
+    font-size:.92rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem 1.5rem;
+    justify-content:space-between;
+  }
+  footer a{color:var(--dust-dim)}
+  footer a:hover,footer a:focus-visible{color:var(--gold)}
+
+  @media (max-width:30rem){
+    .card a{flex-direction:column;gap:.15rem}
+    .handle{font-size:.9rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="mark" href="/">APEXBOUTS</a>
+
+  <div class="tape">
+    <h1>
+      <span class="side">Apex</span>
+      <span class="versus"><span>versus</span></span>
+      <span class="side">Apex</span>
+    </h1>
+  </div>
+
+  <p class="stakes">Two wild animals. Thirty seconds. One of them walks away with it.</p>
+  <p class="cadence">A new bout every day.</p>
+
+  <h2>Where to watch</h2>
+  <ul class="card">
+    <li><a href="https://youtube.com/@apexbouts"><span class="venue">YouTube</span><span class="handle">@apexbouts</span></a></li>
+    <li><a href="https://tiktok.com/@apexbouts"><span class="venue">TikTok</span><span class="handle">@apexbouts</span></a></li>
+    <li><a href="https://instagram.com/apexbouts"><span class="venue">Instagram</span><span class="handle">@apexbouts</span></a></li>
+    <li><a href="https://facebook.com/apexbouts"><span class="venue">Facebook</span><span class="handle">/apexbouts</span></a></li>
+  </ul>
+
+  <footer>
+    <span>Every bout is AI-generated.</span>
+    <a href="privacy.html">Privacy</a>
+  </footer>
+</div>
+</body>
+</html>
